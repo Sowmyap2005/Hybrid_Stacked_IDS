@@ -1,4 +1,4 @@
-# Hybrid Intrusion Detection System with Stacked Ensemble and Autoencoder-Based Unseen Attack Detection
+# Feature-Fused Intrusion Detection: A Stacking Framework With Ensemble Classifiers, Deep Learning, and Autoencoder Anomaly Signals
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
@@ -90,13 +90,13 @@ The exact preprocessing implementation is in [`src/01_preprocess.py`](src/01_pre
 
 ### Base learners
 
-| Component | Configuration |
-|---|---|
-| Random Forest | 50 trees, `max_depth=12` |
-| XGBoost | 50 estimators, `max_depth=6`, learning rate 0.1, histogram tree method |
-| DNN | Dense(128) → Dropout(0.3) → Dense(64) → Dropout(0.3) → Softmax |
-| Autoencoder | 80% input → 16 → 8 → 16 → original feature dimension |
-| Meta-classifier | Logistic Regression, `class_weight="balanced"` |
+| Component       | Configuration                                                          |
+| --------------- | ---------------------------------------------------------------------- |
+| Random Forest   | 50 trees, `max_depth=12`                                               |
+| XGBoost         | 50 estimators, `max_depth=6`, learning rate 0.1, histogram tree method |
+| DNN             | Dense(128) → Dropout(0.3) → Dense(64) → Dropout(0.3) → Softmax         |
+| Autoencoder     | 80% input → 16 → 8 → 16 → original feature dimension                   |
+| Meta-classifier | Logistic Regression, `class_weight="balanced"`                         |
 
 The DNN and autoencoder are trained for 10 epochs with batch size 512 in the supplied training workflow.
 
@@ -429,7 +429,7 @@ See [`LICENSE`](LICENSE).
 
 If you use this repository or its implementation in academic work, please cite the software using [`CITATION.cff`](CITATION.cff).
 
-For the final publication, replace the placeholder repository URL, author metadata, and publication DOI in `CITATION.cff` before making the repository public.
+The CITATION.cff file contains the current repository and author metadata. Publication DOI information will be added when the associated manuscript is formally published.
 
 ---
 
@@ -465,4 +465,3 @@ For reproducibility issues, please open a GitHub issue with:
 - exact command executed,
 - relevant error output,
 - and repository commit hash.
-
