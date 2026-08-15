@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Large datasets
+data/TrafficLabelling/*.csv
+data/**/*.pcap
+data/**/*.pcapng
+
+# Large generated intermediate arrays
+X_train_nopca.pkl
+X_test_nopca.pkl
+y_train_nopca.pkl
+y_test_nopca.pkl
+X_train*.pkl
+X_test*.pkl
+y_train*.pkl
+y_test*.pkl
+
+# Temporary/generated logs
+*.tmp
+*.bak
+*.swp
+
+# Generated model checkpoints not explicitly curated
+*.h5
+*.ckpt

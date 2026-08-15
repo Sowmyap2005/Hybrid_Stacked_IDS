@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+
+title: "Feature-Fused Intrusion Detection: A Stacking Framework With Ensemble Classifiers, Deep Learning, and Autoencoder Anomaly Signals"
+
+message: "If you use this software or its experimental artifacts, please cite this repository and the associated publication."
+
+type: software
+
+authors:
+  - family-names: "P"
+    given-names: "Gurhoshiaa"
+    affiliation: "Vellore Institute of Technology, Chennai"
+  - family-names: "B"
+    given-names: "Suvan"
+    affiliation: "Vellore Institute of Technology, Chennai"
+  - family-names: "P"
+    given-names: "Sowmya"
+    affiliation: "Vellore Institute of Technology, Chennai"
+  - family-names: "R"
+    given-names: "Sanjay"
+    affiliation: "Vellore Institute of Technology, Chennai"
+  - family-names: "Moturi"
+    given-names: "Sanjana"
+    affiliation: "Vellore Institute of Technology, Chennai"
+
+repository-code: "https://github.com/Sowmyap2005/Hybrid_Stacked_IDS"
+
+url: "https://github.com/Sowmyap2005/Hybrid_Stacked_IDS"
+
+license: MIT
+
+version: "1.0.0"
+
+date-released: "2026-08-15"
+
+keywords:
+  - intrusion detection
+  - network intrusion detection
+  - CIC-IDS2017
+  - autoencoder
+  - zero-day detection
+  - anomaly detection
+  - stacking ensemble
+  - machine learning
+  - deep learning
+  - cybersecurity

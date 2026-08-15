@@ -1,0 +1,13 @@
+class,roc_auc,pr_auc,support
+BENIGN,0.9996,0.9999,90844
+Bot,0.9998,0.8173,74
+DDoS,0.9998,0.9991,5149
+DoS GoldenEye,1.0000,0.9998,403
+DoS Hulk,1.0000,0.9998,9194
+DoS Slowhttptest,0.9991,0.9886,218
+DoS slowloris,0.9982,0.9893,223
+FTP-Patator,1.0000,0.9989,315
+PortScan,0.9998,0.9981,6347
+SSH-Patator,1.0000,0.9999,239
+Web Attack  Brute Force,0.9993,0.7525,60
+Web Attack  XSS,0.9819,0.4644,29

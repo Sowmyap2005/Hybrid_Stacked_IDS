@@ -1,0 +1,63 @@
+Starting multi-split known/unseen rotation test (5 rounds)
+CSV files found: 8
+
+All 11 attack classes available: ['Bot', 'DDoS', 'DoS GoldenEye', 'DoS Hulk', 'DoS Slowhttptest', 'DoS slowloris', 'FTP-Patator', 'PortScan', 'SSH-Patator', 'Web Attack \x96 Brute Force', 'Web Attack \x96 XSS']
+Will run 5 rounds, each with a different random 6-known / 5-unseen split.
+
+
+======================================================================
+ROUND 1 of 5
+======================================================================
+Known classes this round: ['Web Attack \x96 Brute Force', 'FTP-Patator', 'DDoS', 'DoS slowloris', 'DoS Slowhttptest', 'DoS GoldenEye']
+Unseen classes this round: ['Bot', 'DoS Hulk', 'PortScan', 'SSH-Patator', 'Web Attack \x96 XSS']
+Round 1 result: ROC-AUC=0.7901  PR-AUC=0.7405  FPR=0.0418  Detection=0.3553
+
+======================================================================
+ROUND 2 of 5
+======================================================================
+Known classes this round: ['DoS GoldenEye', 'SSH-Patator', 'Web Attack \x96 Brute Force', 'DoS Slowhttptest', 'Bot', 'Web Attack \x96 XSS']
+Unseen classes this round: ['DDoS', 'DoS Hulk', 'DoS slowloris', 'FTP-Patator', 'PortScan']
+Round 2 result: ROC-AUC=0.8082  PR-AUC=0.8263  FPR=0.0476  Detection=0.4098
+
+======================================================================
+ROUND 3 of 5
+======================================================================
+Known classes this round: ['FTP-Patator', 'DoS slowloris', 'DoS Slowhttptest', 'Web Attack \x96 XSS', 'DDoS', 'Web Attack \x96 Brute Force']
+Unseen classes this round: ['Bot', 'DoS GoldenEye', 'DoS Hulk', 'PortScan', 'SSH-Patator']
+Round 3 result: ROC-AUC=0.7855  PR-AUC=0.7514  FPR=0.0424  Detection=0.3766
+
+======================================================================
+ROUND 4 of 5
+======================================================================
+Known classes this round: ['DoS GoldenEye', 'Web Attack \x96 XSS', 'Bot', 'DoS slowloris', 'DoS Slowhttptest', 'FTP-Patator']
+Unseen classes this round: ['DDoS', 'DoS Hulk', 'PortScan', 'SSH-Patator', 'Web Attack \x96 Brute Force']
+Round 4 result: ROC-AUC=0.8188  PR-AUC=0.8305  FPR=0.0473  Detection=0.4006
+
+======================================================================
+ROUND 5 of 5
+======================================================================
+Known classes this round: ['DoS Hulk', 'DoS GoldenEye', 'Web Attack \x96 Brute Force', 'Web Attack \x96 XSS', 'DoS Slowhttptest', 'SSH-Patator']
+Unseen classes this round: ['Bot', 'DDoS', 'DoS slowloris', 'FTP-Patator', 'PortScan']
+Round 5 result: ROC-AUC=0.7281  PR-AUC=0.5692  FPR=0.0490  Detection=0.1488
+
+
+======================================================================
+FINAL SUMMARY — ALL ROUNDS
+======================================================================
+Round   ROC-AUC     PR-AUC      FPR       Detection   
+------------------------------------------------------
+1       0.7901      0.7405      0.0418    0.3553      
+2       0.8082      0.8263      0.0476    0.4098      
+3       0.7855      0.7514      0.0424    0.3766      
+4       0.8188      0.8305      0.0473    0.4006      
+5       0.7281      0.5692      0.0490    0.1488      
+
+======================================================================
+HONEST AVERAGE (across all random known/unseen splits)
+======================================================================
+Mean ROC-AUC: 0.7861  (std: 0.0314)
+Mean PR-AUC:  0.7436  (std: 0.0947)
+Range: 0.7281 to 0.8188
+
+(For reference, the earlier single-split result was ROC-AUC 0.643.
+This average of 5 independent splits is the more honest, defensible number.)

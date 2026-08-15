@@ -1,0 +1,40 @@
+{
+  "title": "Feature-Fused Intrusion Detection: A Stacking Framework With Ensemble Classifiers, Deep Learning, and Autoencoder Anomaly Signals",
+  "description": "Reproducible research software and supporting artifacts for a CIC-IDS2017-based hybrid intrusion detection study. The repository implements a stacking framework combining ensemble classifiers, deep learning, and autoencoder-based anomaly signals for intrusion and zero-day attack detection.",
+  "creators": [
+    {
+      "name": "Gurhoshiaa P",
+      "affiliation": "Vellore Institute of Technology, Chennai"
+    },
+    {
+      "name": "Suvan B",
+      "affiliation": "Vellore Institute of Technology, Chennai"
+    },
+    {
+      "name": "Sowmya P",
+      "affiliation": "Vellore Institute of Technology, Chennai"
+    },
+    {
+      "name": "Sanjay R",
+      "affiliation": "Vellore Institute of Technology, Chennai"
+    },
+    {
+      "name": "Sanjana Moturi",
+      "affiliation": "Vellore Institute of Technology, Chennai"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "intrusion detection",
+    "network intrusion detection",
+    "CIC-IDS2017",
+    "autoencoder",
+    "zero-day detection",
+    "anomaly detection",
+    "stacking ensemble",
+    "machine learning",
+    "deep learning",
+    "cybersecurity"
+  ],
+  "upload_type": "software"
+}

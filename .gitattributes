@@ -1,0 +1,17 @@
+# Keep GitHub language detection and line endings predictable
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.cff text eol=lf
+
+# Binary research artifacts
+*.keras binary
+*.pkl binary
+*.png binary
+
+# Do not normalize large binary artifacts
+*.keras -text
+*.pkl -text
