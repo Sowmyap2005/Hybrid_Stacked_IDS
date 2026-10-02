@@ -95,7 +95,7 @@ The exact preprocessing implementation is in [`src/01_preprocess.py`](src/01_pre
 | Random Forest   | 50 trees, `max_depth=12`                                               |
 | XGBoost         | 50 estimators, `max_depth=6`, learning rate 0.1, histogram tree method |
 | DNN             | Dense(128) → Dropout(0.3) → Dense(64) → Dropout(0.3) → Softmax         |
-| Autoencoder     | 80% input → 16 → 8 → 16 → original feature dimension                   |
+| Autoencoder     | 80-feature input → 16 → 8 → 16 → 80 (trained on BENIGN flows only)     |
 | Meta-classifier | Logistic Regression, `class_weight="balanced"`                         |
 
 The DNN and autoencoder are trained for 10 epochs with batch size 512 in the supplied training workflow.
@@ -117,11 +117,13 @@ The included `results/metrics/stacked_model_auc_metrics.csv` reports one-vs-rest
 From that supplied table:
 
 - **Macro ROC-AUC:** 0.9981
-- **Support-weighted ROC-AUC:** 0.9996
+- **Support-weighted ROC-AUC:** 0.9997 (0.9996 when recomputed from the rounded per-class values)
 - **Macro PR-AUC:** 0.9173
 - **Support-weighted PR-AUC:** 0.9993
 
 These are descriptive summaries calculated from the per-class values stored in the repository. The complete per-class results, including support, should be used when reporting results in the manuscript.
+
+`results/metrics/README.md` maps every results file to the manuscript table or figure it supports. The per-epoch values behind the DNN training curves (Figs 2–3) were not saved during training; only the figure (`results/figures/dnn_training_history_corrected.png`) is provided. These curves are a training diagnostic and are not used for any reported result.
 
 > **Important:** Very high aggregate scores are strongly influenced by the dataset's class distribution and the experimental protocol. They should not be interpreted as evidence of equivalent performance on operational network traffic.
 
@@ -172,7 +174,8 @@ See [`src/13_unseen_split_rotation.py`](src/13_unseen_split_rotation.py) and [`r
 │   ├── 11_adaptive_threshold_analysis.py
 │   ├── 12_compare_ae_loss.py
 │   ├── 13_unseen_split_rotation.py
-│   └── 14_pca_ablation_analysis.py
+│   ├── 14_component_ablation.py
+│   └── 15_export_result_tables.py
 │
 ├── models/
 │   ├── random_forest_model_nopca.pkl
@@ -202,13 +205,13 @@ Large raw datasets and large intermediate arrays are intentionally excluded from
 
 ## 6. Installation
 
-Python **3.11** is recommended for the supplied environment.
+Python **3.11** is recommended for the supplied environment. The saved model files were created with scikit-learn 1.4.2; `requirements.txt` pins this version because pickled scikit-learn models can give different results, or fail to load, under other versions.
 
 ### Option A — pip
 
 ```bash
-git clone <REPOSITORY-URL>
-cd <REPOSITORY-DIRECTORY>
+git clone https://github.com/Sowmyap2005/Hybrid_Stacked_IDS.git
+cd Hybrid_Stacked_IDS
 
 python3.11 -m venv .venv
 source .venv/bin/activate        # macOS/Linux
@@ -285,15 +288,27 @@ The preprocessing stage produces the intermediate files required by the training
 ### PCA ablation
 
 ```bash
-python src/14_pca_ablation_analysis.py
 python src/07_plot_pca_ablation.py
 ```
+
+This draws Fig 7 from the Table 4 values recorded in the script. The script that trained the with-PCA and without-PCA models is not yet included.
 
 ### Component ablation
 
 ```bash
+python src/14_component_ablation.py
 python src/06_plot_component_ablation.py
 ```
+
+`14_component_ablation.py` removes one component at a time and retrains only the logistic-regression meta-model (Table 6). `06_plot_component_ablation.py` draws Fig 8 from the Table 6 values.
+
+### Export of result tables
+
+```bash
+python src/15_export_result_tables.py
+```
+
+Regenerates the CSV files in `results/metrics/` (Table 2, Table 3, Fig 5 and Fig 6 values, overall metrics and per-flow test predictions) from the saved models and the held-out test split. See `results/metrics/README.md` for which file supports which table or figure.
 
 ### Autoencoder loss comparison
 

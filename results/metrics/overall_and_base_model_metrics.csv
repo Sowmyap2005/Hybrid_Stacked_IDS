@@ -1,0 +1,5 @@
+model,accuracy,weighted_precision,weighted_recall,weighted_f1,macro_f1,balanced_accuracy,n_test,roc_auc_macro_ovr,roc_auc_weighted_ovr
+Stacked (final),0.9973,0.9974,0.9973,0.9974,0.9229,0.9357,113095,0.9981,0.9997
+Random Forest,0.9954,0.9958,0.9954,0.9956,0.8864,0.914,113095,,
+XGBoost,0.9962,0.9964,0.9962,0.9962,0.9043,0.9336,113095,,
+DNN,0.961,0.9698,0.961,0.9634,0.7742,0.9585,113095,,

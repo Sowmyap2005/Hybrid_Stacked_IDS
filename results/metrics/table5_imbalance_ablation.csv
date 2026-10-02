@@ -1,0 +1,9 @@
+Configuration,Model,Accuracy,Weighted F1,Macro F1
+No rebalancing,Random Forest,0.9841,0.9835,0.7359
+No rebalancing,XGBoost,0.9848,0.9845,0.7784
+Class-weighting only,Random Forest,0.9743,0.9751,0.8188
+Class-weighting only,XGBoost,0.9632,0.9664,0.7351
+SMOTE only,Random Forest,0.9707,0.9728,0.7898
+SMOTE only,XGBoost,0.966,0.9688,0.748
+SMOTE + class-weighting,Random Forest,0.9707,0.9728,0.7898
+SMOTE + class-weighting,XGBoost,0.966,0.9688,0.748

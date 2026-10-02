@@ -46,3 +46,5 @@ y_test*.pkl
 # Generated model checkpoints not explicitly curated
 *.h5
 *.ckpt
+
+results/splits/*_raw.csv

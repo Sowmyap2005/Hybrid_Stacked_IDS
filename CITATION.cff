@@ -7,7 +7,7 @@ message: "If you use this software or its experimental artifacts, please cite th
 type: software
 
 authors:
-  - family-names: "P"
+  - family-names: "S"
     given-names: "Gurhoshiaa"
     affiliation: "Vellore Institute of Technology, Chennai"
   - family-names: "B"
@@ -23,22 +23,22 @@ authors:
     given-names: "Sanjana"
     affiliation: "Vellore Institute of Technology, Chennai"
 
-repository-code: "https://github.com/suvanbalasubramaniam/Hybrid_Stacked_IDS"
+repository-code: "https://github.com/Sowmyap2005/Hybrid_Stacked_IDS"
 
-url: "https://github.com/suvanbalasubramaniam/Hybrid_Stacked_IDS"
+url: "https://github.com/Sowmyap2005/Hybrid_Stacked_IDS"
 
 license: MIT
 
-version: "1.0.0"
+version: "1.1.0"
 
-date-released: "2026-08-15"
+date-released: "2026-10-02"
 
 keywords:
   - intrusion detection
   - network intrusion detection
   - CIC-IDS2017
   - autoencoder
-  - zero-day detection
+  - unseen-attack evaluation
   - anomaly detection
   - stacking ensemble
   - machine learning

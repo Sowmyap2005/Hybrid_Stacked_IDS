@@ -1,6 +1,6 @@
 {
   "repository_artifact": "Hybrid Intrusion Detection System with Stacked Ensemble and Autoencoder-Based Unseen Attack Detection",
-  "artifact_date": "2026-08-15",
+  "artifact_date": "2026-10-02",
   "python_recommended": "3.11",
   "main_seed": 42,
   "unseen_split_seeds": [
@@ -14,5 +14,7 @@
   "raw_dataset_in_repository": false,
   "large_intermediate_arrays_in_repository": false,
   "primary_metrics_source": "results/metrics/stacked_model_auc_metrics.csv",
-  "unseen_experiment_source": "results/experiments/multi_split_rotation_log.txt"
+  "unseen_experiment_source": "results/experiments/multi_split_rotation_log.txt",
+  "scikit_learn_version_used_for_saved_models": "1.4.2",
+  "results_index": "results/metrics/README.md"
 }

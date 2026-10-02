@@ -1,25 +1,25 @@
 {
   "title": "Feature-Fused Intrusion Detection: A Stacking Framework With Ensemble Classifiers, Deep Learning, and Autoencoder Anomaly Signals",
-  "description": "Reproducible research software and supporting artifacts for a CIC-IDS2017-based hybrid intrusion detection study. The repository implements a stacking framework combining ensemble classifiers, deep learning, and autoencoder-based anomaly signals for intrusion and zero-day attack detection.",
+  "description": "Code, trained models and result data supporting the manuscript \"Feature-fused intrusion detection: A stacking framework with ensemble classifiers, deep learning, and autoencoder anomaly signals\" (submitted to PLOS ONE). The study uses the public CIC-IDS2017 dataset, which is not redistributed here; see docs/DATA.md for how to obtain it. The repository implements a stacking framework combining Random Forest, XGBoost, a deep neural network and a benign-traffic autoencoder, and includes PCA and component ablations, SHAP analysis, latency benchmarking, a repeated known/unseen attack-class evaluation, and the values behind the manuscript's tables and figures (results/metrics/README.md).",
   "creators": [
     {
-      "name": "Gurhoshiaa P",
+      "name": "S, Gurhoshiaa",
       "affiliation": "Vellore Institute of Technology, Chennai"
     },
     {
-      "name": "Suvan B",
+      "name": "B, Suvan",
       "affiliation": "Vellore Institute of Technology, Chennai"
     },
     {
-      "name": "Sowmya P",
+      "name": "P, Sowmya",
       "affiliation": "Vellore Institute of Technology, Chennai"
     },
     {
-      "name": "Sanjay R",
+      "name": "R, Sanjay",
       "affiliation": "Vellore Institute of Technology, Chennai"
     },
     {
-      "name": "Sanjana Moturi",
+      "name": "Moturi, Sanjana",
       "affiliation": "Vellore Institute of Technology, Chennai"
     }
   ],
@@ -29,12 +29,13 @@
     "network intrusion detection",
     "CIC-IDS2017",
     "autoencoder",
-    "zero-day detection",
+    "unseen-attack evaluation",
     "anomaly detection",
     "stacking ensemble",
     "machine learning",
     "deep learning",
     "cybersecurity"
   ],
-  "upload_type": "software"
+  "upload_type": "software",
+  "version": "1.1.0"
 }
