@@ -420,13 +420,15 @@ Before publication, it is recommended to record a checksum for the final model a
 
 ## 14. Data availability
 
-The full CIC-IDS2017 dataset is not redistributed in this repository.
+The original CIC-IDS2017 dataset is not redistributed in this repository. It is publicly available from the Canadian Institute for Cybersecurity.
 
-This repository contains the code required to process the dataset, together with derived results and selected trained artifacts. Users must obtain the original dataset from its official source and comply with its applicable terms.
+The minimal dataset required to reproduce the reported evaluation results, consisting of the held-out test set used for the final evaluation, is available on Zenodo:
 
-This separation is intentional to avoid redistributing a third-party dataset and to keep the Git repository within practical hosting limits.
+https://doi.org/10.5281/zenodo.23096574
 
-See [`docs/DATA.md`](docs/DATA.md).
+This repository contains the preprocessing, training, evaluation, and analysis code, together with derived results and selected trained artifacts.
+
+See [`docs/DATA.md`](docs/DATA.md) for additional information on dataset provenance and handling.
 
 ---
 
