@@ -8,7 +8,7 @@ This repository contains the reproducible implementation and supporting artifact
 
 The primary system combines four complementary models—**Random Forest, XGBoost, a deep neural network (DNN), and a benign-traffic autoencoder**—through a logistic-regression stacking meta-classifier. The repository also contains separate experiments for PCA ablation, component ablation, reconstruction-loss selection, adaptive threshold analysis, SHAP-based interpretability, inference benchmarking, and repeated known/unseen attack-class evaluation.
 
-> **Research/reproducibility note:** The repository is intended to accompany a scientific publication. Reported values should be reproduced from the supplied scripts and artifacts rather than inferred from screenshots or figures. The repository deliberately does **not** redistribute the full CIC-IDS2017 CSV files or large intermediate training matrices; see [Data availability](#data-availability).
+> **Research/reproducibility note:** The repository is intended to accompany a scientific publication. Reported values should be reproduced from the supplied scripts and artifacts rather than inferred from screenshots or figures. The repository deliberately does **not** redistribute the full CIC-IDS2017 CSV files or large intermediate training matrices; See [Data availability](#14-data-availability) and [`docs/DATA.md`](docs/DATA.md) for details.
 
 ---
 
